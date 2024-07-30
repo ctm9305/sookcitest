@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍻숙취계산기🍻</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍻숙취계산기🍻</h1>
+        <h3>이 숙취 계산기는 위드마크 공식이 적용되었습니다</h3>
+        <h5>C = A÷(10PR) - (βt)</h5>
+        
+        <form id="calculator-form">
+            <label>주종:</label>
+            <div id="drink-buttons">
+                <button type="button" data-drink="soju">소주</button>
+                <button type="button" data-drink="beer">맥주</button>
+                <button type="button" data-drink="whiskey">양주</button>
+                <button type="button" data-drink="makgeolli">막걸리</button>
+            </div>
+            
+            <label for="quantity">음주량(잔):</label>
+            <input type="range" id="quantity" min="1" max="21" step="1" value="1">
+            <div id="quantity-label">1</div>
+            
+            <label for="insult-count">욕설 횟수:</label>
+            <input type="range" id="insult-count" min="1" max="5" step="1" value="3">
+            <div id="insult-count-label">3</div>
+            
+            <label for="voice">목소리 대시벨:</label>
+            <input type="range" id="voice" min="1" max="5" step="1" value="3">
+            <div id="voice-label">3</div>
+            
+            <label for="blush">볼 빨간 정도:</label>
+            <input type="range" id="blush" min="1" max="5" step="1" value="3">
+            <div id="blush-label">3</div>
+            
+            <label for="taemin">사람에게 기댄 정도:</label>
+            <input type="range" id="taemin" min="1" max="5" step="1" value="3">
+            <div id="taemin-label">3</div>
+            
+            <label for="weight">체중(kg):</label>
+            <input type="number" id="weight" required>
+            
+            <label for="gender">성별:</label>
+            <select id="gender" required>
+                <option value="male">남자</option>
+                <option value="female">여자</option>
+            </select>
+            
+            <button type="button" onclick="calculate()">계산하기</button>
+        </form>
+        <div id="selected-drink">선택된 주종: 없음</div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

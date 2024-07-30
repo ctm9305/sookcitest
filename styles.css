@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, select, button, #drink-buttons {
+    margin-bottom: 10px;
+}
+
+#drink-buttons button {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#drink-buttons button.selected {
+    background-color: #0056b3;
+    border: 2px solid #003d80;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+#quantity-label, #insult-count-label, #voice-label, #blush-label, #taemin-label {
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#selected-drink {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
